@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.container {
+  background-color: #cacaca;
+  margin: 1rem 0;
+  height: 600px;
+
+  display: flex;
+  flex-direction: row;
+  /* flex-direction - row, row-reverse, column, column-reverse */
+
+  justify-content: center;
+  /* justify-content - flex-start, flex-end, center, space-around, space-evenly, space-between */
+
+  align-items: center;
+  /* align-items -  stretch, flex-start, flex-end, center, baseline */
+
+  align-content: center;
+  /* align-content - flex-start, flex-end, center, space-around, space-between, space-evenly */
+
+  flex-wrap: wrap;
+  /* flex-wrap - wrap, nowrap */
+}
+
+.item {
+  background-color: #ff0037;
+  color: white;
+  font-size: 3rem;
+  padding: 2rem;
+  margin: 1rem;
+
+  flex-grow: 1;
+  /* flex-grow - numerical value */
+
+  flex-shrink: 0;
+  /* flex-shrink - numerical value */
+
+  flex-basis: auto;
+  /* flex-basis - numerical value */
+}
+
+.item-4 {
+  flex-grow: 5;
+  flex-shrink: 0; /* 1 or 0 - if 0, item will not shrink beyond flex-basis value and if 1, item will shrink */
+  flex-basis: 500px;
+}
+
+.container-2 {
+  background-color: #cacaca;
+  margin: 1rem 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.item2-3 {
+  align-self: flex-end;
+  /* align-self - flex-start, flex-end, stretch, center, baseline */
+
+  order: -1;
+  /* order - numerical value */
+}
+
+.item2-4 {
+  height: 15rem;
+}

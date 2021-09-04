@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  margin: 1rem;
+}
+
+img {
+  border: 1px solid #ccc;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+}
