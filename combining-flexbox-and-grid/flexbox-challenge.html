@@ -13,51 +13,62 @@
       }
 
       .container {
-        margin: 0 auto;
-        height: 100vh;
-        max-width: 1200px;
+        min-height: 100vh;
         display: flex;
-        flex-flow: column wrap;
-      }
-
-      .container > *,
-      .content > * {
-        background-color: #ccc;
-        border: 1px solid #555;
+        flex-direction: column;
       }
 
       header {
+        background-color: #ccc;
+      }
+
+      footer {
+        background-color: #ccc;
       }
 
       .content {
-        flex: 1;
         display: flex;
+        flex-flow: column;
+        flex: 1;
       }
 
       main {
-        order: 2;
+        flex: 1;
+      }
+
+      @media screen and (min-width: 768px) {
+        .content {
+          margin: 0 auto;
+          width: 80%;
+          flex-direction: row;
+        }
+
+        aside {
+          flex: 0 0 20%;
+        }
+
+        aside.nav {
+          order: -1;
+        }
+
+        aside.ads {
+          order: 2;
+        }
+      }
+
+      main {
+        background-color: dodgerblue;
         flex: 1;
       }
 
       aside {
-        flex: 0 1 200px;
-      }
-
-      aside.nav {
-        order: 1;
-      }
-
-      aside.ads {
-        order: 3;
-      }
-
-      footer {
+        background-color: yellow;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <header>Header</header>
+      <header><h1>Header</h1></header>
       <div class="content">
         <main>Main Content</main>
         <aside class="nav">Nav</aside>
