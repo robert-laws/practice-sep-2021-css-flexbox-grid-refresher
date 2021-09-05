@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        background-color: #f0f0f0;
+        margin: 1rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+        height: 1000px;
+      }
+
+      .item {
+        padding: 1rem;
+        background-color: rgb(120, 138, 69);
+        border: 2px solid #000;
+        color: white;
+        flex-grow: 1;
+        flex-shrink: 1; /* 1 -> item will shrink as needed to prevent overflow, 0 -> item will not shrink below the flex-basis value */
+        flex-basis: 150px;
+        /* flex: 1 1 600px; */
+      }
+
+      .item-3 {
+        order: -1;
+        flex-basis: 400px;
+        /* flex-shrink: 0; */
+      }
+
+      .item-7 {
+        order: -2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">Item # 1</div>
+      <div class="item item-2">Item # 2</div>
+      <div class="item item-3">Item # 3</div>
+      <div class="item item-4">Item # 4</div>
+      <div class="item item-5">Item # 5</div>
+      <div class="item item-6">Item # 6</div>
+      <div class="item item-7">Item # 7</div>
+      <div class="item item-8">Item # 8</div>
+      <div class="item item-9">Item # 9</div>
+      <div class="item item-10">Item # 10</div>
+      <div class="item item-11">Item # 11</div>
+      <div class="item item-12">Item # 12</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Challenge</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        margin: 0 auto;
+        height: 100vh;
+        max-width: 1200px;
+        display: flex;
+        flex-flow: column wrap;
+      }
+
+      .container > *,
+      .content > * {
+        background-color: #ccc;
+        border: 1px solid #555;
+      }
+
+      header {
+      }
+
+      .content {
+        flex: 1;
+        display: flex;
+      }
+
+      main {
+        order: 2;
+        flex: 1;
+      }
+
+      aside {
+        flex: 0 1 200px;
+      }
+
+      aside.nav {
+        order: 1;
+      }
+
+      aside.ads {
+        order: 3;
+      }
+
+      footer {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <div class="content">
+        <main>Main Content</main>
+        <aside class="nav">Nav</aside>
+        <aside class="ads">Ads</aside>
+      </div>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
