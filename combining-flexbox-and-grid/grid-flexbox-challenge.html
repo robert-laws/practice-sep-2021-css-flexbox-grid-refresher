@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid and Flexbox Challenge</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Playfair Display', serif;
+      }
+
+      a {
+        background-color: #3ab6bf;
+        text-decoration: none;
+        color: white;
+        border-radius: 0.25rem;
+        display: inline-block;
+        padding: 0.1em 0.4em;
+        margin-left: 0.5em;
+      }
+
+      main.wrapper {
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      /* HEADER */
+      .hero {
+        background: linear-gradient(#3ab6bf5e, #1a5271c7),
+          url('hero.jpg') no-repeat top right;
+        background-size: cover;
+        color: #fff;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 5px #1a5271;
+        margin-right: 30px;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        font-weight: 200;
+        text-shadow: 2px 2px 5px #1a5271;
+        flex: 1;
+      }
+
+      .hero a {
+        font-size: 1rem;
+      }
+
+      /* STORIES */
+      .stories {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+      }
+
+      .stories article {
+        border: 1px solid #e2e2e2;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 250px 1fr;
+      }
+
+      .stories figure {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(200px, 50px);
+      }
+
+      .stories img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+      }
+
+      .stories figcaption {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+
+      .stories figcaption h3 {
+        color: white;
+        padding: 0.75rem;
+        font-size: 1.25rem;
+      }
+
+      .stories p {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 1rem 0.75rem;
+        color: #666666;
+      }
+
+      /* FOOTER */
+      footer {
+        background-color: #333;
+        padding: 0.75rem;
+        color: white;
+        text-align: center;
+        font-size: 0.75rem;
+      }
+
+      /* MEDIA QUERY */
+      @media screen and (min-width: 800px) {
+        .hero {
+          background-position: center center;
+          padding: 4em 2em;
+        }
+
+        .hero h1 {
+          text-align: right;
+          max-width: 50%;
+          margin-left: auto;
+        }
+
+        .hero p {
+        }
+
+        .stories {
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <section class="hero">
+        <h1>Sea tales</h1>
+        <p>
+          The ocean has always proven to be a place of fascination and wonder.
+          The creatures that call it home are some of the most extraordinary
+          that live on our beautiful blue planet. Explore stories of those who
+          have been there, stayed salty, and made a difference.
+          <a href="#">Read more</a>
+        </p>
+      </section>
+      <section class="stories">
+        <article>
+          <figure>
+            <img src="s1.jpg" alt="sea tales" />
+            <figcaption>
+              <h3>Sea turtle hatchlings</h3>
+            </figcaption>
+          </figure>
+          <p>
+            Consequatur voluptatum pariatur eum, ipsum, aut iure. Assumenda
+            natus porro nesciunt ab minus. Doloribus, nisi, sint deleniti
+            aperiam iure voluptate ducimus, amet corporis fuga, cupiditate ullam
+            asperiores commodi laborum quis?<a href="">Read more</a>
+          </p>
+        </article>
+
+        <article>
+          <figure>
+            <img src="s2.jpg" alt="sea tales" />
+            <figcaption>
+              <h3>Tropical fish</h3>
+            </figcaption>
+          </figure>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+            a aliquam saepe facere blanditiis corrupti vel in expedita dolore
+            accusamus alias accusantium ipsa, facilis dolorum dolorem? Non odit
+            ex quo.<a href="">Read more</a>
+          </p>
+        </article>
+
+        <article>
+          <figure>
+            <img src="s3.jpg" alt="sea tales" />
+            <figcaption>
+              <h3>Humpback whales</h3>
+            </figcaption>
+          </figure>
+          <p>
+            Sed error iusto labore nesciunt incidunt perspiciatis deserunt, a
+            enim delectus saepe qui ipsum blanditiis maiores provident odit
+            eveniet ducimus nisi laudantium, reprehenderit assumenda iure est
+            expedita. Consequatur recusandae, debitis.<a href="">Read more</a>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyight 2021 | Sea tales &mdash; stories with heart and water.</p>
+    </footer>
+  </body>
+</html>
