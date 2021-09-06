@@ -204,6 +204,9 @@ nav .btn:hover {
 
 .tripList {
   list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
 }
 
 .tripList li {
@@ -212,10 +215,16 @@ nav .btn:hover {
   border: solid 1px #dedede;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1.8rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto minmax(140px, 1fr) auto;
 }
 
 .tripList h3,
 .tripList img {
+  grid-column: 1;
+  grid-row: 1 / 2;
 }
 
 .tripList h3 {
@@ -225,6 +234,8 @@ nav .btn:hover {
   margin-bottom: 1rem;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(51, 51, 51, 0.7);
+
+  align-self: end;
 }
 
 .trips a {
@@ -234,6 +245,10 @@ nav .btn:hover {
   height: 2rem;
   margin-top: 1rem;
   text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .trips a:hover {
@@ -241,6 +256,37 @@ nav .btn:hover {
 }
 
 /* ############ 5. CTA ########################## */
+.cta {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+}
+
+.cta1 {
+  background-image: url('../images/ctaBG1_sm.jpg');
+}
+
+.cta2 {
+  background-image: url('../images/ctaBG2_sm.jpg');
+}
+
+.cta3 {
+  background-image: url('../images/ctaBG3_sm.jpg');
+}
+
+.cta h1 {
+  margin-left: 1rem;
+}
+
+.cta p {
+  border-left: solid 1px #fff;
+  padding-left: 1rem;
+  max-width: 700px;
+}
 
 /* ############ 6. Team ######################### */
 
@@ -329,6 +375,7 @@ nav .btn:hover {
   }
 
   .tripList {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   .trips article {
@@ -344,6 +391,29 @@ nav .btn:hover {
 
   .trips p {
     flex: 3;
+  }
+
+  .cta {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta1 {
+    background-image: url('../images/ctaBG1_lg.jpg');
+  }
+
+  .cta2 {
+    background-image: url('../images/ctaBG2_lg.jpg');
+  }
+
+  .cta3 {
+    background-image: url('../images/ctaBG3_lg.jpg');
+  }
+
+  .cta h1 {
+    margin-right: 1rem;
   }
 }
 /* ############ 10b. Media Query, (min-width: 1000px) ############ */
