@@ -13,6 +13,8 @@ Flexbox vs Grid
 
 ## [Flexbox Basics](flexbox-basics/README.md)
 
+## [Grid Basics](grid-basics/README.md)
+
 ## [Flexbox Responsive Image](flexbox-responsive-image/README.md)
 
 ## [Combining CSS Flexbox and Grid](combining-flexbox-and-grid/README.md)
