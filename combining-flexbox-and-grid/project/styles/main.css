@@ -357,16 +357,222 @@ nav .btn:hover {
 }
 
 /* ############ 7. Problem ###################### */
+section.problem {
+  padding: 1rem;
+  margin: auto;
+}
+
+.problem h1 {
+  margin-left: 1rem;
+  color: #35b1e8;
+}
+
+.problem h1 ~ p {
+  border-left: solid 1px #dedede;
+  padding-left: 1rem;
+}
+
+.problem h3 {
+  margin: 1rem 0 0 1rem;
+  color: #223055;
+}
+
+.problem ul {
+  margin: 0 0 1rem 3rem;
+}
+
+.problem img {
+  margin: auto;
+  display: block;
+}
 
 /* ############ 7a. Problem > Action ############ */
+.action {
+  padding: 1rem;
+}
+
+.action h3 {
+  color: #35b1e8;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.action h1 + p {
+  border-left: solid 1px #dedede;
+  padding-left: 1rem;
+}
+
+.action article h1 {
+  margin-left: 1rem;
+}
+
+.action ul li {
+  border: solid 1px #dedede;
+  border-radius: 6px;
+  list-style-type: none;
+  margin: 1rem auto;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto auto;
+}
+
+.action li h1 {
+  background: url(../images/action1.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 6px 0 0 6px;
+  color: #fff;
+  padding-top: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px #223055;
+
+  grid-column: 1 / 2;
+  grid-row: span 2;
+}
+
+.action li h4 {
+  background-color: #223055;
+  border-radius: 0 6px 0 0;
+  color: #fff;
+  padding: 0.5rem 1rem;
+
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  align-self: start;
+}
+
+.action li p {
+  padding: 0.5rem 1rem 1rem;
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+
+.action li:nth-of-type(2) h1 {
+  background-image: url(../images/action2.jpg);
+}
+
+.action li:nth-of-type(3) h1 {
+  background-image: url(../images/action3.jpg);
+}
+
+.action li:nth-of-type(4) h1 {
+  background-image: url(../images/action4.jpg);
+}
+
+.action li:nth-of-type(5) h1 {
+  background-image: url(../images/action5.jpg);
+}
+
+.action li:nth-of-type(6) h1 {
+  background-image: url(../images/action6.jpg);
+}
 
 /* ############ 8. Gallery ###################### */
+.gallery {
+  max-width: 1200px;
+  margin: auto;
+}
 
-/* ############ 9. Footer ####################### */
+.gallery h1 {
+  text-align: center;
+  color: #223055;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
 
-/* ############ 9a. Footer > Contact ############ */
+.galleryWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-flow: row dense;
+  gap: 0.5rem;
+}
 
-/* ############ 9b. Footer > Connect ############ */
+.galleryWrap img[src$='_w.jpg'] {
+  grid-column-end: span 2;
+}
+
+.galleryWrap img[src$='_p.jpg'] {
+  grid-row-end: span 2;
+}
+
+.galleryWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.galleryWrap img:hover {
+  opacity: 0.7;
+}
+
+/* ######### 9. Footer ######### */
+footer {
+  margin-top: 1rem;
+}
+/* ######### 9a. Footer > Contact ######### */
+.form {
+  background-color: #223055;
+  color: #fff;
+  padding: 1rem 1rem 2rem;
+}
+
+.form p {
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+/* ######### 9b. Footer > Connect ######### */
+.social,
+.contactInfo {
+  background-color: #13b1e7;
+  color: #fff;
+  padding: 1rem 1rem 0;
+  text-align: center;
+}
+
+.social h3 {
+  border-bottom: solid 1px #b6e8ff;
+  font-weight: 400;
+  padding-bottom: 0.25rem;
+}
+
+.socialIcons {
+  font-size: 200%;
+  padding: 1rem 0;
+}
+
+.socialIcons a {
+  color: #223055;
+  padding: 0 0.5rem;
+}
+
+.socialIcons a:hover {
+  color: #ffc107;
+}
+
+.contactInfo {
+  padding-top: 0;
+}
+
+.contactInfo article {
+  border-top: solid 1px #b6e8ff;
+  padding: 1rem 0;
+}
+
+.contactInfo h4 {
+  font-weight: 400;
+}
+
+.contactInfo li {
+  font-weight: 300;
+  list-style-type: none;
+}
+
+.copy {
+  font-size: 70%;
+  font-weight: 300;
+  padding-top: 1rem;
+}
 
 /* ############ 10. Media Queries ############### */
 
@@ -481,7 +687,173 @@ nav .btn:hover {
   .cta h1 {
     margin-right: 1rem;
   }
+
+  .team {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .team h1 {
+    order: 2;
+    grid-column: 2 / -1;
+    align-self: center;
+  }
+
+  .teamMembers {
+    order: 1;
+    grid-column: 1 / -1;
+  }
+
+  .team p {
+    order: 2;
+    padding-right: 1rem;
+    border-right: 1px solid #dedede;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  section.problem {
+    background: url(../images/problem1.png) no-repeat center left;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+  }
+
+  .problem h1 {
+    color: #233458;
+    padding-right: 1rem;
+    text-align: right;
+    text-shadow: 1px 1px 2px #fff;
+
+    grid-column: 1 / 5;
+  }
+
+  .problem h1 ~ p,
+  .problem h3,
+  .problem ul {
+    grid-column: 5 / -1;
+  }
+
+  .problem ul {
+    margin-left: 2rem;
+    padding-right: 1rem;
+  }
+
+  .problem img {
+    display: none;
+  }
+
+  .action {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .action article {
+    margin-bottom: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .action article h1 {
+    text-align: right;
+    margin-right: 1rem;
+  }
+
+  .action ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .action ul li {
+    flex: 1 1 48%;
+    margin: 0.5rem;
+
+    grid-template-columns: 2fr 4fr;
+  }
+
+  /* ######### 10a-viii. Footer, Large screen rules ######### */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.25fr;
+  }
+
+  .contact {
+  }
+
+  .social h3 {
+    border-bottom: none;
+    padding: 0.5rem 1rem 0.5rem 0;
+    text-align: right;
+  }
+
+  .social article {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    align-items: center;
+  }
+
+  .socialIcons {
+    border-left: solid #fff 1px;
+    font-size: 150%;
+    padding: 0.5rem 0 0.5rem 1rem;
+  }
+
+  .socialIcons a {
+    display: block;
+  }
+
+  .contactInfo {
+    background-color: #b6e8ff;
+    color: #233156;
+    padding: 1rem 0 0;
+    grid-column: 1 / -1;
+  }
 }
 /* ############ 10b. Media Query, (min-width: 1000px) ############ */
 @media screen and (min-width: 1000px) {
+  /* ######### 10b-i. Footer, X-Large screen rules ######### */
+  .form {
+    display: grid;
+    grid-template-columns: auto minmax(min-content, 580px);
+    grid-template-areas:
+      '. h'
+      '. p';
+    row-gap: 1rem;
+  }
+
+  .form h3 {
+    grid-area: h;
+  }
+
+  .form p.formIntro {
+    grid-area: p;
+  }
+
+  .social article {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .socialIcons {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .socialIcons a {
+    display: inline-block;
+    font-size: 180%;
+  }
 }
